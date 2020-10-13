@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Website for edgeledger firm">
+  <meta name="keywords" content="firm,business,law firm,law">
+  <!-- Font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- Utilities go first, in case of style.css over-writing it. -->
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Primer Testimonio</title>
+</head>
+
+<body id="home">
+  <!-- This is everything on the center fold, including navbar -->
+  <header class="hero testimonio">
+    <div class="navbar top" id="navbar">
+      <h1 class="logo">
+        <i class="fas fa-book-open"></i><span class="text-primary">Fresno</span>Law Firm
+      </h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="index.html#acerca_de">Informacion</a></li>
+          <li><a href="index.html#casos">Servicios</a></li>
+          <li><a href="index.html#testimonios">Testimonios</a></li>
+          <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <h1>Testimonio</h1>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="post">
+      <h2>Primer Testimonio</h2>
+      <p class="meta">
+        <i class="fa fa-user"></i>Publicado por <strong>Joe Doe</strong> | octubre 15 2020
+      </p>
+      <img src="images/blog/blog1.jpg" alt="">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam pariatur sed praesentium molestias deleniti
+        sequi. Autem labore ab commodi eius?</p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel voluptatem, quia modi, saepe quas minus voluptate
+        recusandae enim dolor fuga ex dolores distinctio laborum facere obcaecati aut excepturi quo sint similique nemo
+        ipsum nostrum? Ab consequatur magnam dolor dicta totam saepe facere nesciunt, maxime distinctio blanditiis
+        fugiat explicabo soluta reprehenderit dolore. Beatae iusto molestias doloremque, iste explicabo animi earum
+        sequi.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate veritatis accusantium dignissimos. Est
+        laboriosam minus atque ut, quidem quia illo corporis ipsum alias animi enim eius dignissimos consequuntur
+        aliquam cum voluptatum praesentium facilis nihil! Ipsum officia beatae tempore quisquam ea consectetur
+        voluptatibus doloremque soluta, laboriosam nisi minima mollitia et aspernatur.
+      </p>
+    </section>
+
+  </main>
+  <footer class="footer bg-dark">
+    <div class="social">
+      <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+      <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+      <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+      <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+    </div>
+    <p>Copyright &copy; 2020 Fresno Law Firm</p>
+  </footer>
+
+  <script>
+    const navbar = document.querySelector('#navbar');
+
+    let scrolled = false;
+
+    window.onscroll = function () {
+      if (window.pageYOffset > 100) {
+        navbar.classList.remove('top');
+        if (!scrolled) {
+          navbar.style.transform = 'translateY(-70px)';
+        }
+        setTimeout(function () {
+          navbar.style.transform = 'translateY(0)';
+          scrolled = 'true';
+        }, 200);
+      } else {
+        navbar.classList.add('top');
+        scrolled = false;
+      }
+
+    };
+  </script>
+
+</body>
+
+</html>
